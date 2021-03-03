@@ -58,6 +58,7 @@
     <ProjectReference Include="..\..\..\CefSharp\CefSharp.BrowserSubprocess\CefSharp.BrowserSubprocess.csproj" />
     <ProjectReference Include="..\..\..\CefSharp\CefSharp.Core\CefSharp.Core.csproj" />
     <ProjectReference Include="..\..\..\CefSharp\CefSharp\CefSharp.csproj" />
+    <ProjectReference Include="..\..\..\Chromely\src\Chromely.Core\Chromely.Core.csproj" />
     <ProjectReference Include="..\..\..\Chromely\src\Chromely\Chromely.csproj" />
   </ItemGroup>
 
