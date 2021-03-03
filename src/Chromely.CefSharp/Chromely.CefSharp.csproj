@@ -26,11 +26,25 @@
     <RepositoryType>Github Repository</RepositoryType>
     <RepositoryUrl>https://github.com/chromelyapps/CefSharp</RepositoryUrl>
     <Configurations>Debug;Release;ReleaseLinux;DebugLinux</Configurations>
-    <Platforms>AnyCPU</Platforms>
+    <Platforms>x64;x86</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
+    <NoWarn>1701;1702; NU5125;7035</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
+    <NoWarn>1701;1702; NU5125;7035</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
     <DocumentationFile>bin\Debug\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
     <NoWarn>1701;1702; NU5125;7035</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -40,6 +54,22 @@
     <DocumentationFile>bin\Release\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
     <NoWarn>1701;1702; NU5125;7035</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DocumentationFile>bin\Release\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
+    <NoWarn>1701;1702; NU5125;7035</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DocumentationFile>bin\Release\$(TargetFramework)\Chromely.CefSharp.xml</DocumentationFile>
+    <NoWarn>1701;1702; NU5125;7035</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|x86'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -60,12 +90,6 @@
     <ProjectReference Include="..\..\..\CefSharp\CefSharp\CefSharp.csproj" />
     <ProjectReference Include="..\..\..\Chromely\src\Chromely.Core\Chromely.Core.csproj" />
     <ProjectReference Include="..\..\..\Chromely\src\Chromely\Chromely.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Chromely.Core">
-      <HintPath>..\Chromely.Core\Chromely.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
