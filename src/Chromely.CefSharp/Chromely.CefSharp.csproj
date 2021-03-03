@@ -43,7 +43,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.Common" Version="87.1.132" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
@@ -56,9 +55,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\CefSharp\CefSharp.BrowserSubprocess\CefSharp.BrowserSubprocess.csproj" />
+    <ProjectReference Include="..\..\..\CefSharp\CefSharp.Core\CefSharp.Core.csproj" />
+    <ProjectReference Include="..\..\..\CefSharp\CefSharp\CefSharp.csproj" />
+    <ProjectReference Include="..\..\..\Chromely\src\Chromely\Chromely.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Chromely.Core">
       <HintPath>..\Chromely.Core\Chromely.Core.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="NativeHost\Hooks\" />
+    <Folder Include="NativeHost\Interop\" />
+    <Folder Include="NativeHost\WinBase\" />
   </ItemGroup>
 
 </Project>
